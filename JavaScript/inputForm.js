@@ -28,3 +28,17 @@ text.addEventListener('input', function () {
     }
 });
 
+
+//uc2 -Validating Email
+
+const email = document.querySelector('#email');
+const emailError = document.querySelector('.email-error');
+email.addEventListener('input', function () {
+    let emailRegex = RegExp("^[A-Za-z]{3,}([.+_-][A-Za-z0-9]+)*[@][A-Za-z0-9]{1,}[.][a-zA-Z0-9]{2,3}([.][0-9a-zA-Z]{2})?$");
+    if (emailRegex.test(email.value)) {
+        emailError.textContent = "";
+    }
+    else {
+        emailError.textContent = "Email is not Valid";
+    }
+});
