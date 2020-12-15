@@ -59,14 +59,15 @@ tel.addEventListener('input', function () {
 
 
 //uc4-Validating password min 8 characters
+//uc5-1 spl char , atleast one digit cap letter and small letter
 const pwd = document.querySelector('#pwd');
 const pwdError = document.querySelector('.pwd-error');
 pwd.addEventListener('input', function () {
-    let pwdRegex = RegExp('^.{8,}$');
+    let pwdRegex = RegExp('^(?=.*[0-9])(?=.*[A-Z])(?=.*[^0-9a-zA-Z])(?!.*[^0-9a-zA-Z].*[^0-9a-zA-Z]).{8,}$');
     if (pwdRegex.test(pwd.value)) {
         pwdError.textContent = "";
     }
     else {
         pwdError.textContent = "password is not Valid";
     }
-});
+});        
