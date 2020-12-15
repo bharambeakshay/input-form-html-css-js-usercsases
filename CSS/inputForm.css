@@ -1,0 +1,54 @@
+/** @format */
+
+html,
+input {
+  font-family: sans-serif;
+}
+.headerContainer {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  background: tomato;
+  font-weight: bold;
+  padding: 10px;
+}
+body {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 2em;
+}
+form {
+  margin-top: 50px;
+}
+div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+label,
+input,
+button {
+  font-size: 16px;
+  line-height: 1.5;
+}
+label {
+  text-align: left;
+  width: 30%;
+  margin-right: 2%;
+}
+input {
+  flex: auto;
+}
+button {
+  width: 70%;
+  margin: auto;
+}
+error-output {
+  font-size: 12px;
+  font-style: italic;
+  color: red;
+}
+
